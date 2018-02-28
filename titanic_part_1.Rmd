@@ -56,3 +56,13 @@ train <- read.csv('train.csv')
 test  <- read.csv('test.csv')
 ```
 
+For studing the complete data set lets join test and train data set.
+Before that we will add a new coloum “set” and give name as ‘test’ for test dataset
+and ‘train’ for train dataset to have an idea about which record it is.
+
+```{r}
+train$set <- "train"
+test$set  <- "test"
+test$Survived <- NA
+full <- rbind(train, test)
+```
