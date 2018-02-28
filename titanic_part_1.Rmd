@@ -1,0 +1,58 @@
+---
+title: "titanic survivors part 1"
+author: "beniamino di maro"
+date: "2/28/2018"
+output: html_document
+---
+
+## From the work of Hitesh Palamada "Head Start for Data Scientist"
+
+In this first attempt I'll take all information given by the author to better understand how to make a good analysis
+of a data set on titanic survivors
+
+# Installing all necessary libraries
+
+```{r, message = FALSE}
+# data wrangling
+library(tidyverse)
+library(forcats)
+library(stringr)
+library(caTools)
+
+# data assessment/visualizations
+library(DT)
+library(data.table)
+library(pander)
+library(ggplot2)
+library(scales)
+library(grid)
+library(gridExtra)
+library(corrplot)
+library(VIM) 
+library(knitr)
+library(vcd)
+library(caret)
+
+
+# model
+library(xgboost)
+library(MLmetrics)
+library('randomForest') 
+library('rpart')
+library('rpart.plot')
+library('car')
+library('e1071')
+library(vcd)
+library(ROCR)
+library(pROC)
+library(VIM)
+library(glmnet) 
+```
+
+# Load the dataset
+
+```{r}
+train <- read.csv('train.csv')
+test  <- read.csv('test.csv')
+```
+
